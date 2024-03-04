@@ -21,26 +21,17 @@ rtopy
 
 Call R functions from Python
 
-* BSD3 Clear license
-* Documentation: https://rtopy.readthedocs.io.
 
 Install
 --------
 
-``
-pip install rtopy
-``
+``pip install rtopy``
 
 Examples
 --------
 
-* See: https://github.com/Techtonique/rtopy/blob/main/rtopy/demo/thierrymoudiki_20240304_rtopyintro.ipynb
+* See .. _this notebook: https://github.com/Techtonique/rtopy/blob/main/rtopy/demo/thierrymoudiki_20240304_rtopyintro.ipynb
 
-
-Features
---------
-
-* TODO
 
 Credits
 -------
