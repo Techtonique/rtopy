@@ -144,7 +144,7 @@ setup(
     },
     install_requires=install_requires,
     license="BSD license",
-    long_description="Call R functions from Python (using command line utilities)",
+    long_description="Call R functions from Python (using command line utilities and text mining)",
     include_package_data=True,
     keywords='rtopy',
     name='rtopy',
