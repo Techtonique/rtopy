@@ -20,9 +20,9 @@ def callfunc(r_code, r_func="my_func", type_return="float", **kwargs):
 
     `r_func` (str): name of the R function (defined in `r_code`) being called.
 
-    `type_return` (str): 	type of function return. Either "int", "float", "list" and "dict".
+    `type_return` (str): type of function return. Either "int", "float", "list" and "dict".
 
-    `kwargs`: not used (yet)
+    `kwargs`: additional (named) parameters to be passed to R functions
 
     # Example:
 
