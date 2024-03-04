@@ -151,6 +151,6 @@ setup(
     packages=find_packages(include=['rtopy', 'rtopy.*']),
     test_suite='tests',
     url='https://github.com/thierrymoudiki/rtopy',
-    version='0.1.0',
+    version='0.1.1',
     zip_safe=False,
 )
