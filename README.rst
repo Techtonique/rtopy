@@ -6,21 +6,35 @@ rtopy
 .. image:: https://img.shields.io/pypi/v/rtopy.svg
         :target: https://pypi.python.org/pypi/rtopy
 
-.. image:: https://img.shields.io/travis/thierrymoudiki/rtopy.svg
-        :target: https://travis-ci.com/thierrymoudiki/rtopy
+.. image:: https://www.codefactor.io/repository/github/techtonique/rtopy/badge/main
+   :target: https://www.codefactor.io/repository/github/techtonique/rtopy/overview/main
+   :alt: CodeFactor
 
-.. image:: https://readthedocs.org/projects/rtopy/badge/?version=latest
-        :target: https://rtopy.readthedocs.io/en/latest/?version=latest
+.. image:: https://hits.dwyl.com/Techtonique/rtopy.svg?style=flat-square
+   :target: http://hits.dwyl.com/Techtonique/rtopy
+   :alt: Hits
+
+.. image:: https://img.shields.io/badge/documentation-is_here-green
+        :target: https://techtonique.github.io/rtopy/
         :alt: Documentation Status
-
-
 
 
 Call R functions from Python
 
-
-* Free software: BSD license
+* BSD3 Clear license
 * Documentation: https://rtopy.readthedocs.io.
+
+Install
+--------
+
+``
+pip install rtopy
+``
+
+Examples
+--------
+
+* See: https://github.com/Techtonique/rtopy/blob/main/rtopy/demo/thierrymoudiki_20240304_rtopyintro.ipynb
 
 
 Features

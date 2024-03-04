@@ -54,16 +54,14 @@ coverage: ## check code coverage quickly with the default Python
 	$(BROWSER) htmlcov/index.html
 
 docs: ## generate docs		
-	pip install autopep8 black pdoc 
-	black rtopy/* --line-length=80	
-	find rtopy/ -name "*.py" -exec autopep8 --max-line-length=80 --in-place {} +
+	pip install black pdoc 
+	black rtopy/* --line-length=80		
 	pdoc -t docs rtopy/* --output-dir rtopy-docs
 	find . -name '__pycache__' -exec rm -fr {} +
 
 servedocs: ## compile the docs watching for change	 	
-	pip install autopep8 black pdoc 
+	pip install black pdoc 
 	black rtopy/* --line-length=80	
-	find rtopy/ -name "*.py" -exec autopep8 --max-line-length=80 --in-place {} +
 	pdoc -t docs rtopy/* 
 	find . -name '__pycache__' -exec rm -fr {} +
 
@@ -80,7 +78,7 @@ install: clean ## install the package to the active Python's site-packages
 	python3 -m pip install .
 
 build-site: docs ## export mkdocs website to a folder		
-	cp -rf rtopy-docs/* ../../Pro_Website/Techtonique.github.io/rtopy
+	cp -rf rtopy-docs/* ../../../Pro_Website/Techtonique.github.io/rtopy
 	find . -name '__pycache__' -exec rm -fr {} +
 
 run-examples: ## run all examples with one command

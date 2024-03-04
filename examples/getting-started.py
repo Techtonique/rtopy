@@ -1,8 +1,9 @@
 import rtopy as rp
 
 
-# notice the double braces 
 # an R function that returns the product of an arbitrary number of arguments 
+# notice the double braces around the R function's code
+# and the a semi-colon (';') after each instruction
 r_code1 = f"""my_func <- function(arg1=NULL, arg2=NULL, arg3=NULL, arg4=NULL, arg5=NULL) {{
                 args <- c(arg1, arg2, arg3, arg4, arg5);
                 args <- args[!sapply(args, is.null)];
@@ -55,24 +56,24 @@ r_code6 = f"""my_func <- function(arg1, arg2) {{
          """
 
 
-print(rp.callfunc(r_code=r_code1, type_result="int", arg1=3, arg2=5, arg3=2))
-print(rp.callfunc(r_code=r_code2, type_result="float", arg1=1.5, arg2=2.5, arg4=4.5))
-print(rp.callfunc(r_code=r_code2, type_result="float", arg1=3.5, arg3=5.3, arg4=4.2))
+print(rp.callfunc(r_code=r_code1, type_return="int", arg1=3, arg2=5, arg3=2))
+print(rp.callfunc(r_code=r_code2, type_return="float", arg1=1.5, arg2=2.5, arg4=4.5))
+print(rp.callfunc(r_code=r_code2, type_return="float", arg1=3.5, arg3=5.3, arg4=4.2))
 print("\n -------------------------------------------------- \n")
-res = rp.callfunc(r_code=r_code3, type_result="dict", arg1=2, arg2=3)
+res = rp.callfunc(r_code=r_code3, type_return="dict", arg1=2, arg2=3)
 print(res)
 print("-----------------------")
-res2 = rp.callfunc(r_code=r_code3, type_result="dict", arg1="cyl", arg2="disp")
+res2 = rp.callfunc(r_code=r_code3, type_return="dict", arg1="cyl", arg2="disp")
 print(res2)
 print("-----------------------")
-res3 = rp.callfunc(r_code=r_code3, type_result="dict", arg1="cyl", arg2=3)
+res3 = rp.callfunc(r_code=r_code3, type_return="dict", arg1="cyl", arg2=3)
 print(res3)
 print("-----------------------")
-res4 = rp.callfunc(r_code=r_code5, type_result="dict", arg1=2, arg2=3)
+res4 = rp.callfunc(r_code=r_code5, type_return="dict", arg1=2, arg2=3)
 print(res4)
 print("\n -------------------------------------------------- \n")
-print(rp.callfunc(r_code=r_code4, type_result="list", arg1=3.5, arg2=5.3))
-print(rp.callfunc(r_code=r_code4, type_result="list", arg1=3.5, arg2=5.3, arg3=4.1))
+print(rp.callfunc(r_code=r_code4, type_return="list", arg1=3.5, arg2=5.3))
+print(rp.callfunc(r_code=r_code4, type_return="list", arg1=3.5, arg2=5.3, arg3=4.1))
 print("\n -------------------------------------------------- \n")
-res5 = rp.callfunc(r_code=r_code6, type_result="dict", arg1=2, arg2=3)
+res5 = rp.callfunc(r_code=r_code6, type_return="dict", arg1=2, arg2=3)
 print(res5)
