@@ -85,8 +85,7 @@ run-examples: ## run all examples with one command
 	find examples -maxdepth 2 -name "*.py" -exec  python3 {} \;
 
 run-tests: ## run all the tests with one command
-	pip install mkdocs nose2 coverage	
-	nose2 --verbose --with-coverage
-	coverage report -m
-	coverage html
+	python3 -m coverage run -m unittest discover -s tests -p "*.py"
+	python3 -m coverage report --omit="venv/*,tests/*"	
+	python3 -m coverage html --omit="venv/*,tests/*"
 	$(BROWSER) htmlcov/index.html

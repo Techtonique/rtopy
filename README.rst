@@ -30,7 +30,7 @@ Install
 Examples
 --------
 
-* See .. _this notebook: https://github.com/Techtonique/rtopy/blob/main/rtopy/demo/thierrymoudiki_20240304_rtopyintro.ipynb
+See  .. _this notebook: https://github.com/Techtonique/rtopy/blob/main/rtopy/demo/thierrymoudiki_20240304_rtopyintro.ipynb
 
 
 Credits

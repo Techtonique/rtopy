@@ -2,7 +2,6 @@
 
 __author__ = """T. Moudiki"""
 __email__ = "thierry.moudiki@gmail.com"
-__version__ = "0.1.1"
 
 from .rtopy import callfunc
 

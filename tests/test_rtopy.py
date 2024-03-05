@@ -43,6 +43,7 @@ class TestRtopy(unittest.TestCase):
         self.assertEqual(res1, 30)
         self.assertEqual(res2, 8.5)
         self.assertEqual(res3, 13)
+        self.assertAlmostEqual(rp.callfunc(), -0.6264538)
 
     def test_list_return_value(self):
         # an R function that returns a vector 
@@ -93,8 +94,6 @@ class TestRtopy(unittest.TestCase):
         self.assertEqual(res3['y'][0], 6)
         self.assertEqual(res4['y'][0][1], 160)
         self.assertEqual(res5['z'], 5)        
-
-
 
     def test_command_line_interface(self):
         """Test the CLI."""

@@ -55,6 +55,15 @@ r_code6 = f"""my_func <- function(arg1, arg2) {{
           }}
          """
 
+# an R function that returns a matrix
+r_code7 = f"""my_func <- function(arg1, arg2) {{   
+            X <- as.matrix(mtcars);
+            colnames(X) <- NULL; 
+            rownames(X) <- NULL;            
+            return(x = X[1:3, c(arg1, arg2)])
+          }}
+         """
+
 
 print(rp.callfunc(r_code=r_code1, type_return="int", arg1=3, arg2=5, arg3=2))
 print(rp.callfunc(r_code=r_code2, type_return="float", arg1=1.5, arg2=2.5, arg4=4.5))
@@ -77,3 +86,9 @@ print(rp.callfunc(r_code=r_code4, type_return="list", arg1=3.5, arg2=5.3, arg3=4
 print("\n -------------------------------------------------- \n")
 res5 = rp.callfunc(r_code=r_code6, type_return="dict", arg1=2, arg2=3)
 print(res5)
+print("\n -------------------------------------------------- \n")
+res6 = rp.callfunc()
+print(res6)
+print("\n -------------------------------------------------- \n")
+res7 = rp.callfunc(r_code=r_code7, type_return="list", arg1=2, arg2=3)
+print(res7)

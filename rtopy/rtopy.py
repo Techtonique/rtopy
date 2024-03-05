@@ -7,22 +7,29 @@ from .utils import *
 
 
 @lru_cache  # size is 128 'results'
-def callfunc(r_code, r_func="my_func", type_return="float", **kwargs):
+def callfunc(
+    r_code="my_func <- function() {{set.seed(1); rnorm(1)}}",
+    r_func="my_func",
+    type_return="float",
+    **kwargs,
+):
     """
 
     `callfunc` calls an R function `r_func` defined in an R code `r_code`.
 
     # Parameters:
 
-    `r_code` (str): R code to be executed for the function `r_func` to work. Must
-    use double braces around function definition, and a semi-colon (';') after
+    `r_code` (str): R code to be executed for the function `r_func` to run.
+    Must use double braces around function definitions and a semi-colon (';') after
     each instruction.
 
     `r_func` (str): name of the R function (defined in `r_code`) being called.
 
     `type_return` (str): type of function return. Either "int", "float", "list" and "dict".
+    Remark an R list is equivalent a Python dict. An R vector is equivalent to a Python list.
+    An R matrix will be transformed to a Python list of lists.
 
-    `kwargs`: additional (named) parameters to be passed to R functions
+    `kwargs`: additional (named!) parameters to be passed to R function specified in `r_code`
 
     # Example:
 
@@ -48,6 +55,8 @@ def callfunc(r_code, r_func="my_func", type_return="float", **kwargs):
 
     """
 
+    assert r_func in r_code, f"Function {r_func} not found in your `r_code`"
+
     r_code_ = r_code + ";"
 
     # Constructing argument string for the R function call
@@ -65,7 +74,12 @@ def callfunc(r_code, r_func="my_func", type_return="float", **kwargs):
     ).stdout
 
     if type_return in ("int", "float", "list"):
-        result = result.split("\n")[-2].strip().replace("[1] ", "")
+        if is_vector(result):
+            type_result = "vector"
+            result = result.split("\n")[-2].strip().replace("[1] ", "")
+        elif is_matrix(result):
+            type_result = "matrix"
+            result = str_to_matrix(result)
 
     if type_return == "dict":
         keys = extract_elements_with_pattern(extract_pattern(result))
@@ -93,7 +107,10 @@ def callfunc(r_code, r_func="my_func", type_return="float", **kwargs):
         return int(result)
 
     elif type_return == "list":
-        return [float(elt) for elt in result.split(" ")]
+        if type_result == "vector":
+            return [float(elt) for elt in result.split(" ")]
+        elif type_result == "matrix":
+            return result
 
     elif type_return == "dict":
         return result_dict
