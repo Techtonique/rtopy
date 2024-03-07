@@ -4,7 +4,10 @@ rtopy
 
 
 .. image:: https://img.shields.io/pypi/v/rtopy.svg
-        :target: https://pypi.python.org/pypi/rtopy
+   :target: https://pypi.python.org/pypi/rtopy
+
+.. image:: https://static.pepy.tech/badge/rtopy
+   :target: https://www.pepy.tech/projects/rtopy
 
 .. image:: https://www.codefactor.io/repository/github/techtonique/rtopy/badge/main
    :target: https://www.codefactor.io/repository/github/techtonique/rtopy/overview/main
