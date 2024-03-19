@@ -9,6 +9,9 @@ rtopy
 .. image:: https://static.pepy.tech/badge/rtopy
    :target: https://www.pepy.tech/projects/rtopy
 
+.. image:: https://img.shields.io/conda/dn/conda-forge/rtopy.svg
+   :target: https://anaconda.org/conda-forge/rtopy
+
 .. image:: https://www.codefactor.io/repository/github/techtonique/rtopy/badge/main
    :target: https://www.codefactor.io/repository/github/techtonique/rtopy/overview/main
    :alt: CodeFactor
@@ -35,6 +38,10 @@ Examples
 
 See  .. _this notebook: https://github.com/Techtonique/rtopy/blob/main/rtopy/demo/thierrymoudiki_20240304_rtopyintro.ipynb
 
+Note to self (or developers)
+--------
+
+https://github.com/conda-forge/rtopy-feedstock
 
 Credits
 -------
