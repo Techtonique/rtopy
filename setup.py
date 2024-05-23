@@ -102,7 +102,7 @@ from setuptools import setup, find_packages
 from codecs import open
 from os import path
 
-__version__ = "0.1.1"
+__version__ = "0.1.3"
 
 here = path.abspath(path.dirname(__file__))
 
@@ -151,6 +151,6 @@ setup(
     packages=find_packages(include=['rtopy', 'rtopy.*']),
     test_suite='tests',
     url='https://github.com/thierrymoudiki/rtopy',
-    version='0.1.2',
+    version=__version__,
     zip_safe=False,
 )
