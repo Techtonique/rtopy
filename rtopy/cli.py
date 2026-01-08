@@ -1,4 +1,5 @@
 """Console script for rtopy."""
+
 import sys
 import click
 

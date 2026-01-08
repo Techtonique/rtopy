@@ -1,3 +1,27 @@
+"""Lightweight R-Python bridge with extended type support."""
+
+import subprocess
+import json
+import tempfile
+import os
+from typing import Any, Dict, List, Union, Optional
+from .bridge import RBridge
+
+
+# Convenience function
+def call_r(r_code: str, r_func: str, **kwargs) -> Any:
+    """
+    Quick wrapper for one-off R function calls.
+
+    Examples
+    --------
+    >>> result = call_r("f <- function(x) x^2", "f", x=5)
+    >>> print(result)  # 25.0
+    """
+    rb = RBridge()
+    return rb.call(r_code, r_func, **kwargs)
+
+
 """Main module."""
 
 import re
