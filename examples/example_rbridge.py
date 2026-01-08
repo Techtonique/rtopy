@@ -21,14 +21,12 @@ n = 100
 # (will use pandas if available, otherwise dict)
 df = rb.call(r_code, r_func, return_type="pandas", n=n)
 print(df)
-print(pd.DataFrame(df))
 
 rb = RBridge()
 
 # Simple calculation
 code = "add <- function(x, y) x + y"
-rb.call(code, "add", x=5, y=3)
-8.0
+print(rb.call(code, "add", x=5, y=3))
 
 # Statistical summary
 code = '''
@@ -37,4 +35,4 @@ summarize <- function(x) {
 }
 '''
 
-rb.call(code, "summarize", return_type="pandas", x=[1,2,3,4,5])
+print(rb.call(code, "summarize", return_type="pandas", x=[1,2,3,4,5]))
