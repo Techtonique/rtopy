@@ -2,6 +2,10 @@
 
 Lightweight Python bridge for calling R functions with seamless type conversion.
 
+![PyPI](https://img.shields.io/pypi/v/rtopy) [![PyPI - License](https://img.shields.io/pypi/l/rtopy)](https://github.com/thierrymoudiki/rtopy/blob/master/LICENSE) [![Downloads](https://pepy.tech/badge/rtopy)](https://pepy.tech/project/rtopy) 
+[![Downloads](https://anaconda.org/conda-forge/rtopy/badges/downloads.svg)](https://anaconda.org/conda-forge/rtopy)
+[![Documentation](https://img.shields.io/badge/documentation-is_here-green)](https://techtonique.github.io/rtopy/)
+
 ## Features
 
 - **Simple API**: Call R functions with native Python types
