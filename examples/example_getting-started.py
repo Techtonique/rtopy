@@ -1,5 +1,7 @@
+import os 
 import rtopy as rp
 
+print(f" ----- Running: {os.path.basename(__file__)}... ----- ")
 
 # an R function that returns the product of an arbitrary number of arguments 
 # notice the double braces around the R function's code
@@ -68,27 +70,27 @@ r_code7 = f"""my_func <- function(arg1, arg2) {{
 print(rp.callfunc(r_code=r_code1, type_return="int", arg1=3, arg2=5, arg3=2))
 print(rp.callfunc(r_code=r_code2, type_return="float", arg1=1.5, arg2=2.5, arg4=4.5))
 print(rp.callfunc(r_code=r_code2, type_return="float", arg1=3.5, arg3=5.3, arg4=4.2))
-print("\n -------------------------------------------------- \n")
+print(f" -- {'Example 1'} ------------------------------------------------ ")
 res = rp.callfunc(r_code=r_code3, type_return="dict", arg1=2, arg2=3)
 print(res)
-print("-----------------------")
+print(f"-- {'Example 2'} ---------------------")
 res2 = rp.callfunc(r_code=r_code3, type_return="dict", arg1="cyl", arg2="disp")
 print(res2)
-print("-----------------------")
+print(f"-- {'Example 3'} ---------------------")
 res3 = rp.callfunc(r_code=r_code3, type_return="dict", arg1="cyl", arg2=3)
 print(res3)
-print("-----------------------")
+print(f"-- {'Example 4'} ---------------------")
 res4 = rp.callfunc(r_code=r_code5, type_return="dict", arg1=2, arg2=3)
 print(res4)
-print("\n -------------------------------------------------- \n")
+print(f" -- {'Example 5'} --------------------- ")
 print(rp.callfunc(r_code=r_code4, type_return="list", arg1=3.5, arg2=5.3))
 print(rp.callfunc(r_code=r_code4, type_return="list", arg1=3.5, arg2=5.3, arg3=4.1))
-print("\n -------------------------------------------------- \n")
+print(f" -- {'Example 6'} --------------------- ")
 res5 = rp.callfunc(r_code=r_code6, type_return="dict", arg1=2, arg2=3)
 print(res5)
-print("\n -------------------------------------------------- \n")
+print(f" -- {'Example 7'} --------------------- ")
 res6 = rp.callfunc()
 print(res6)
-print("\n -------------------------------------------------- \n")
+print(f" -- {'Example 8'} --------------------- ")
 res7 = rp.callfunc(r_code=r_code7, type_return="list", arg1=2, arg2=3)
 print(res7)
