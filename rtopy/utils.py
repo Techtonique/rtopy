@@ -2,6 +2,7 @@
 
 import re
 
+
 # Extract list patterns from regex
 def extract_pattern(text):
     pattern = r"\$[^\s]+|\[\[\d+\]\]"

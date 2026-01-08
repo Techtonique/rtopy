@@ -12,7 +12,7 @@ from .bridge import RBridge
 def call_r(r_code: str, r_func: str, **kwargs) -> Any:
     """
     Quick wrapper for one-off R function calls.
-    
+
     Examples
     --------
     >>> result = call_r("f <- function(x) x^2", "f", x=5)
@@ -138,4 +138,3 @@ def callfunc(
 
     elif type_return == "dict":
         return result_dict
-

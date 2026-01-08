@@ -9,6 +9,12 @@ from .bridge import RBridge, call_r
 from .exceptions import RExecutionError, RNotFoundError, RTypeError
 
 __version__ = "0.2.0"
-__all__ = ["RBridge", "call_r", "callfunc", 
-           "RExecutionError", "RNotFoundError", 
-           "RTypeError", "__version__"]
+__all__ = [
+    "RBridge",
+    "call_r",
+    "callfunc",
+    "RExecutionError",
+    "RNotFoundError",
+    "RTypeError",
+    "__version__",
+]
