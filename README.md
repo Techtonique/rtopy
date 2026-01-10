@@ -125,3 +125,14 @@ Optional:
 ## License
 
 BSD License Clause Clear
+
+## Notes to self 
+
+1. [https://conda-forge.org/docs/maintainer/adding_pkgs/#step-by-step-instructions](https://conda-forge.org/docs/maintainer/adding_pkgs/#step-by-step-instructions)
+
+```bash
+curl -sL https://github.com/owner/repo/archive/refs/tags/vX.X.X.tar.gz | openssl sha256 (https://conda-forge.org/docs/maintainer/adding_pkgs/#step-by-step-instructions)
+```
+
+
+
