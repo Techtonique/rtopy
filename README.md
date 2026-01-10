@@ -134,5 +134,7 @@ BSD License Clause Clear
 curl -sL https://github.com/owner/repo/archive/refs/tags/vX.X.X.tar.gz | openssl sha256 (https://conda-forge.org/docs/maintainer/adding_pkgs/#step-by-step-instructions)
 ```
 
+2. [https://github.com/conda-forge/rtopy-feedstock](https://github.com/conda-forge/rtopy-feedstock)
+
 
 
