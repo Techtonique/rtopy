@@ -28,6 +28,14 @@ pip install rtopy[full]
 # Install jsonlite in R: install.packages("jsonlite")
 ```
 
+- __2nd method__: using `conda` (Linux and macOS only for now)
+
+```bash
+conda install -c conda-forge rtopy
+```
+
+(Note to self or developers: https://github.com/conda-forge/rtopy-feedstock and https://conda-forge.org/docs/maintainer/adding_pkgs.html#step-by-step-instructions and https://packaging.python.org/en/latest/guides/publishing-package-distribution-releases-using-github-actions-ci-cd-workflows/#the-whole-ci-cd-workflow)
+
 ## Quick Start
 
 Also read [https://thierrymoudiki.github.io/blog/2026/01/08/r/python/rtopy](https://thierrymoudiki.github.io/blog/2026/01/08/r/python/rtopy) for more examples. 
