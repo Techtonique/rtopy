@@ -30,6 +30,8 @@ pip install rtopy[full]
 
 ## Quick Start
 
+Also read [https://thierrymoudiki.github.io/blog/2026/01/08/r/python/rtopy](https://thierrymoudiki.github.io/blog/2026/01/08/r/python/rtopy) for more examples. 
+
 ```python
 from rtopy import RBridge, call_r
 
